@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Brewed Haven — Admin Panel</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="admin.css"/>
+</head>
+<body>
+
+<!-- ══════════ LOGIN SCREEN ══════════ -->
+<div id="loginScreen" class="login-screen">
+  <div class="login-card">
+    <div class="login-logo">Brewed<span>Haven</span></div>
+    <p class="login-sub">Admin Panel Login</p>
+    <div class="fg">
+      <label>Username</label>
+      <input type="text" id="loginUsername" placeholder="admin"/>
+    </div>
+    <div class="fg">
+      <label>Password</label>
+      <input type="password" id="loginPassword" placeholder="••••••••"/>
+    </div>
+    <div class="err" id="loginErr"></div>
+    <button class="btn-primary" onclick="login()">Log In</button>
+    <p class="login-hint">Default: <b>admin</b> / <b>Admin@123</b></p>
+  </div>
+</div>
+
+<!-- ══════════ ADMIN DASHBOARD ══════════ -->
+<div id="dashboard" class="dashboard hidden">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sb-logo">Brewed<span>Haven</span></div>
+    <nav class="sb-nav">
+      <button class="sb-link active" data-tab="overview" onclick="switchSection(this,'overview')">📊 Overview</button>
+      <button class="sb-link" data-tab="reservations" onclick="switchSection(this,'reservations')">📅 Reservations</button>
+      <button class="sb-link" data-tab="menu" onclick="switchSection(this,'menu')">☕ Menu Items</button>
+      <button class="sb-link" data-tab="messages" onclick="switchSection(this,'messages')">✉️ Messages</button>
+    </nav>
+    <button class="logout-btn" onclick="logout()">Log Out</button>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main-content">
+
+    <!-- OVERVIEW -->
+    <section id="sec-overview" class="content-section active">
+      <h1>Dashboard Overview</h1>
+      <div class="stat-cards">
+        <div class="stat-card"><div class="stat-val" id="statReservations">0</div><div class="stat-label">Total Reservations</div></div>
+        <div class="stat-card"><div class="stat-val" id="statPending">0</div><div class="stat-label">Pending</div></div>
+        <div class="stat-card"><div class="stat-val" id="statMenu">0</div><div class="stat-label">Menu Items</div></div>
+        <div class="stat-card"><div class="stat-val" id="statMessages">0</div><div class="stat-label">Contact Messages</div></div>
+      </div>
+      <h2 class="sub-head">Recent Reservations</h2>
+      <div class="table-wrap"><table id="recentResTable"><thead><tr><th>Name</th><th>Date</th><th>Time</th><th>Guests</th><th>Status</th></tr></thead><tbody></tbody></table></div>
+    </section>
+
+    <!-- RESERVATIONS -->
+    <section id="sec-reservations" class="content-section">
+      <div class="sec-header">
+        <h1>Reservations</h1>
+        <select id="resFilter" onchange="loadReservations()">
+          <option value="">All Statuses</option>
+          <option value="pending">Pending</option>
+          <option value="confirmed">Confirmed</option>
+          <option value="completed">Completed</option>
+          <option value="cancelled">Cancelled</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table id="resTable">
+          <thead><tr><th>Name</th><th>Phone</th><th>Email</th><th>Date</th><th>Time</th><th>Guests</th><th>Message</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="sec-menu" class="content-section">
+      <div class="sec-header">
+        <h1>Menu Items</h1>
+        <button class="btn-primary small" onclick="openMenuModal()">+ Add Item</button>
+      </div>
+      <div class="menu-admin-grid" id="menuAdminGrid"></div>
+    </section>
+
+    <!-- MESSAGES -->
+    <section id="sec-messages" class="content-section">
+      <h1>Contact Messages</h1>
+      <div class="table-wrap">
+        <table id="msgTable">
+          <thead><tr><th>Name</th><th>Email</th><th>Message</th><th>Received</th><th>Actions</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ══════════ MENU ITEM MODAL ══════════ -->
+<div id="menuModal" class="modal-overlay hidden">
+  <div class="modal-card">
+    <h3 id="menuModalTitle">Add Menu Item</h3>
+    <input type="hidden" id="menuItemId"/>
+    <div class="fg"><label>Name</label><input type="text" id="mName" placeholder="e.g. Cappuccino"/></div>
+    <div class="fg"><label>Category</label>
+      <select id="mCategory">
+        <option value="coffee">Coffee</option>
+        <option value="fastfood">Fast Food</option>
+        <option value="desserts">Desserts</option>
+        <option value="beverages">Beverages</option>
+        <option value="specials">Specials</option>
+      </select>
+    </div>
+    <div class="fg"><label>Description</label><textarea id="mDescription" placeholder="Short description"></textarea></div>
+    <div class="form-row">
+      <div class="fg"><label>Price (₹)</label><input type="number" id="mPrice" placeholder="200"/></div>
+      <div class="fg"><label>Available</label>
+        <select id="mAvailable"><option value="true">Yes</option><option value="false">No</option></select>
+      </div>
+    </div>
+    <div class="fg"><label>Image URL</label><input type="text" id="mImage" placeholder="https://..."/></div>
+    <div class="err" id="menuModalErr"></div>
+    <div class="modal-actions">
+      <button class="btn-outline" onclick="closeMenuModal()">Cancel</button>
+      <button class="btn-primary" onclick="saveMenuItem()">Save</button>
+    </div>
+  </div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+[
+  {
+    "id": 1,
+    "createdAt": "2026-06-24T10:00:28.330Z",
+    "name": "Signature Espresso",
+    "category": "coffee",
+    "description": "Bold single-origin espresso with a smooth crema finish.",
+    "price": 180,
+    "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&auto=format&fit=crop&q=80",
+    "available": true
+  },
+  {
+    "id": 2,
+    "createdAt": "2026-06-24T10:00:28.334Z",
+    "name": "Creamy Latte",
+    "category": "coffee",
+    "description": "Perfectly steamed milk poured over a double shot of espresso.",
+    "price": 220,
+    "image": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=500&auto=format&fit=crop&q=80",
+    "available": true,
+    "updatedAt": "2026-06-24T10:02:22.694Z"
+  },
+  {
+    "id": 3,
+    "createdAt": "2026-06-24T10:00:28.337Z",
+    "name": "Mocha Delight",
+    "category": "coffee",
+    "description": "Rich chocolate blended with house espresso and foamed milk.",
+    "price": 250,
+    "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500&auto=format&fit=crop&q=80",
+    "available": true
+  },
+  {
+    "id": 4,
+    "createdAt": "2026-06-24T10:00:28.340Z",
+    "name": "Classic Cappuccino",
+    "category": "desserts",
+    "description": "Velvety cappuccino with a thick layer of microfoam and cinnamon.",
+    "price": 200,
+    "image": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=500&auto=format&fit=crop&q=80",
+    "available": true,
+    "updatedAt": "2026-06-24T10:05:44.007Z"
+  },
+  {
+    "id": 5,
+    "createdAt": "2026-06-24T10:00:28.344Z",
+    "name": "Grilled Club Sandwich",
+    "category": "fastfood",
+    "description": "Triple-layered with chicken, lettuce, tomato, and garlic aioli.",
+    "price": 320,
+    "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+    "available": true
+  },
+  {
+    "id": 6,
+    "createdAt": "2026-06-24T10:00:28.346Z",
+    "name": "Haven Burger",
+    "category": "fastfood",
+    "description": "Juicy patty, caramelised onions, cheddar, and smoky sauce.",
+    "price": 380,
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&auto=format&fit=crop&q=80",
+    "available": true
+  },
+  {
+    "id": 7,
+    "createdAt": "2026-06-24T10:00:28.349Z",
+    "name": "Crispy Fries",
+    "category": "fastfood",
+    "description": "Golden seasoned fries served with signature dipping sauces.",
+    "price": 150,
+    "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=500&auto=format&fit=crop&q=80",
+    "available": true
+  },
+  {
+    "id": 8,
+    "createdAt": "2026-06-24T10:00:28.350Z",
+    "name": "Café Wrap",
+    "category": "fastfood",
+    "description": "Grilled veggies or chicken in a whole-wheat wrap with hummus.",
+    "price": 280,
+    "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=500&auto=format&fit=crop&q=80",
+    "available": true
+  },
+  {
+    "id": 9,
+    "createdAt": "2026-06-24T10:00:28.352Z",
+    "name": "New York Cheesecake",
+    "category": "desserts",
+    "description": "Classic baked cheesecake with a buttery graham cracker crust.",
+    "price": 290,
+    "image": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500&auto=format&fit=crop&q=80",
+    "available": true
+  },
+  {
+    "id": 10,
+    "createdAt": "2026-06-24T10:00:28.354Z",
+    "name": "Brownie Lava",
+    "category": "desserts",
+    "description": "Warm chocolate brownie with a molten centre, served with ice cream.",
+    "price": 310,
+    "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&auto=format&fit=crop&q=80",
+    "available": true
+  },
+  {
+    "id": 11,
+    "createdAt": "2026-06-24T10:00:28.355Z",
+    "name": "Velvet Layer Cake",
+    "category": "desserts",
+    "description": "Red velvet cake topped with cream cheese frosting.",
+    "price": 260,
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&auto=format&fit=crop&q=80",
+    "available": true
+  },
+  {
+    "id": 12,
+    "createdAt": "2026-06-24T10:00:28.357Z",
+    "name": "Butter Croissant",
+    "category": "desserts",
+    "description": "Flaky, golden croissant fresh from the oven every morning.",
+    "price": 160,
+    "image": "https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=500&auto=format&fit=crop&q=80",
+    "available": true
+  },
+  {
+    "id": 13,
+    "createdAt": "2026-06-24T10:00:28.359Z",
+    "name": "Berry Smoothie",
+    "category": "beverages",
+    "description": "Mixed berries blended with almond milk and honey.",
+    "price": 200,
+    "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500&auto=format&fit=crop&q=80",
+    "available": true
+  },
+  {
+    "id": 14,
+    "createdAt": "2026-06-24T10:00:28.361Z",
+    "name": "Lemon Mint Cooler",
+    "category": "beverages",
+    "description": "Zesty lemon with fresh mint leaves and sparkling water.",
+    "price": 140,
+    "image": "https://images.unsplash.com/photo-1497534446932-c925b458314e?w=500&auto=format&fit=crop&q=80",
+    "available": true
+  },
+  {
+    "id": 15,
+    "createdAt": "2026-06-24T10:00:28.363Z",
+    "name": "Iced Caramel Macchiato",
+    "category": "beverages",
+    "description": "Cold espresso layered with vanilla milk and caramel drizzle.",
+    "price": 260,
+    "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=500&auto=format&fit=crop&q=80",
+    "available": true
+  },
+  {
+    "id": 16,
+    "createdAt": "2026-06-24T10:00:28.364Z",
+    "name": "Rich Hot Chocolate",
+    "category": "beverages",
+    "description": "Velvety dark chocolate made with whole milk and a hint of vanilla.",
+    "price": 220,
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&auto=format&fit=crop&q=80",
+    "available": true
+  },
+  {
+    "id": 17,
+    "createdAt": "2026-06-24T10:00:28.366Z",
+    "name": "Haven Breakfast Platter",
+    "category": "specials",
+    "description": "Eggs, toast, avocado, seasonal fruit, and house brew coffee.",
+    "price": 520,
+    "image": "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=500&auto=format&fit=crop&q=80",
+    "available": true
+  },
+  {
+    "id": 18,
+    "createdAt": "2026-06-24T10:00:28.367Z",
+    "name": "Chef's Pasta of the Day",
+    "category": "specials",
+    "description": "Fresh handmade pasta in a rotating sauce — ask your server today.",
+    "price": 420,
+    "image": "https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=500&auto=format&fit=crop&q=80",
+    "available": true
+  },
+  {
+    "id": 19,
+    "createdAt": "2026-06-24T10:00:28.369Z",
+    "name": "Truffle Mushroom Toast",
+    "category": "specials",
+    "description": "Sourdough with sautéed mushrooms, truffle oil, and poached egg.",
+    "price": 390,
+    "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=500&auto=format&fit=crop&q=80",
+    "available": true
+  },
+  {
+    "id": 20,
+    "createdAt": "2026-06-24T10:00:28.372Z",
+    "name": "Stack of Pancakes",
+    "category": "specials",
+    "description": "Fluffy buttermilk pancakes with maple syrup and fresh berries.",
+    "price": 340,
+    "image": "https://images.unsplash.com/photo-1484723091739-30990d1c1e2a?w=500&auto=format&fit=crop&q=80",
+    "available": true
+  }
+]
