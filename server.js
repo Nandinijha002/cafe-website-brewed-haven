@@ -22,8 +22,14 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+/* ── SERVE THE MAIN WEBSITE (static HTML/CSS/JS) ── */
+app.use('/', express.static(path.join(__dirname, 'public/website')));
+
 /* ── SERVE THE ADMIN PANEL (static HTML/CSS/JS) ── */
 app.use('/admin', express.static(path.join(__dirname, 'public/admin')));
+
+/* ── SERVE THE ADMIN PANEL (static HTML/CSS/JS) ── */
+// app.use('/admin', express.static(path.join(__dirname, 'public/admin')));
 
 /* ── API ROUTES ── */
 app.use('/api/auth', authRoutes);
