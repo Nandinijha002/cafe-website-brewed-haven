@@ -4,7 +4,6 @@
    Entry point: wires up middleware, routes, and
    starts the Express server.
 ══════════════════════════════════════════════ */
-//test change
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
@@ -24,12 +23,12 @@ app.use(express.json());
 
 /* ── SERVE THE MAIN WEBSITE (static HTML/CSS/JS) ── */
 app.use('/', express.static(path.join(__dirname, 'public/website')));
+// NOTE: if your index.html/style.css/script.js live in the project ROOT
+// instead of public/website/, use this line instead:
+// app.use('/', express.static(__dirname));
 
 /* ── SERVE THE ADMIN PANEL (static HTML/CSS/JS) ── */
 app.use('/admin', express.static(path.join(__dirname, 'public/admin')));
-
-/* ── SERVE THE ADMIN PANEL (static HTML/CSS/JS) ── */
-// app.use('/admin', express.static(path.join(__dirname, 'public/admin')));
 
 /* ── API ROUTES ── */
 app.use('/api/auth', authRoutes);
