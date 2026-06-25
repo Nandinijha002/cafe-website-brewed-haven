@@ -22,7 +22,7 @@ app.use(cors());
 app.use(express.json());
 
 /* ── SERVE THE MAIN WEBSITE (static HTML/CSS/JS) ── */
-app.use('/', express.static(path.join(__dirname, 'public/website')));
+app.use('/', express.static(__dirname));
 // NOTE: if your index.html/style.css/script.js live in the project ROOT
 // instead of public/website/, use this line instead:
 // app.use('/', express.static(__dirname));
