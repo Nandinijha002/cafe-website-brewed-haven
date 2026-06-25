@@ -27,7 +27,7 @@ function switchTab(btn, tabId) {
 /* ── RESERVATION FORM: VALIDATE + SEND TO BACKEND ── */
 
 // Change this if your backend runs on a different URL
-const API_BASE_URL = 'http://localhost:5000';
+const API_BASE_URL = '';
 
 async function submitForm() {
   let valid = true;
